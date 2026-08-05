@@ -1,0 +1,406 @@
+      {/* SECTION 3: 5-COLUMN SUMMARY BAR */}
+      <section className="max-w-[1615px] mx-auto px-6 lg:px-12 py-10 w-full">
+        <div className="flex items-center my-6">
+          <div className="flex-1 border-t border-slate-300"></div>
+          <h2 className="px-4 text-xl font-black text-[#0B1D3A] tracking-wide text-center uppercase">
+            A CAREER OF LEADERSHIP, ACHIEVEMENT, AND IMPACT
+          </h2>
+          <div className="flex-1 border-t border-slate-300"></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          {/* Card 1 */}
+          <div className="bg-white border border-slate-200 rounded-xl p-5 text-center shadow-xs hover:shadow-md transition-shadow flex flex-col items-center justify-between">
+            <div className="bg-[#0B1D3A] text-white p-4 rounded-full w-[84px] h-[84px] mx-auto mb-3 flex items-center justify-center shrink-0">
+              <Users className="w-9 h-9 text-white" />
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-[#0B1D3A] uppercase tracking-wider block mb-1">
+                CHAIRMAN
+              </span>
+              <h3 className="font-bold text-[#0B1D3A] text-sm leading-snug">
+                IBBA Education Committee
+              </h3>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white border border-slate-200 rounded-xl p-5 text-center shadow-xs hover:shadow-md transition-shadow flex flex-col items-center justify-between">
+            <div className="bg-[#0B1D3A] text-white p-4 rounded-full w-[84px] h-[84px] mx-auto mb-3 flex items-center justify-center shrink-0">
+              <Building2 className="w-9 h-9 text-white" />
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-[#0B1D3A] uppercase tracking-wider block mb-1">
+                BOARD MEMBER
+              </span>
+              <h3 className="font-bold text-[#0B1D3A] text-sm leading-snug">
+                IBBA Board of Directors <span className="text-xs font-normal text-[#0B1D3A] block">(Former Member)</span>
+              </h3>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white border border-slate-200 rounded-xl p-5 text-center shadow-xs hover:shadow-md transition-shadow flex flex-col items-center justify-between">
+            <div className="bg-[#0B1D3A] text-white p-4 rounded-full w-[84px] h-[84px] mx-auto mb-3 flex items-center justify-center shrink-0">
+              <BookOpen className="w-9 h-9 text-white" />
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-[#0B1D3A] uppercase tracking-wider block mb-1">
+                AUTHOR OF IBBA COURSES
+              </span>
+              <ul className="text-xs text-[#0B1D3A] space-y-1 mt-1 text-center">
+                <li>• Effective Business Packaging</li>
+                <li>• Managing Due Diligence</li>
+                <li>• Managing Closing & Turnover</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-white border border-slate-200 rounded-xl p-5 text-center shadow-xs hover:shadow-md transition-shadow flex flex-col items-center justify-between">
+            <div className="bg-[#0B1D3A] text-white p-4 rounded-full w-[84px] h-[84px] mx-auto mb-3 flex items-center justify-center shrink-0">
+              <Trophy className="w-9 h-9 text-white" />
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-[#0B1D3A] uppercase tracking-wider block mb-1">
+                RECIPIENT
+              </span>
+              <h3 className="font-bold text-[#0B1D3A] text-xs leading-relaxed">
+                Tom West Award for Outstanding Contributions to the Business Brokerage Industry
+              </h3>
+            </div>
+          </div>
+
+          {/* Card 5 */}
+          <div className="bg-white border border-slate-200 rounded-xl p-5 text-center shadow-xs hover:shadow-md transition-shadow flex flex-col items-center justify-between">
+            <div className="bg-[#0B1D3A] text-white p-4 rounded-full w-[84px] h-[84px] mx-auto mb-3 flex items-center justify-center shrink-0">
+              <Landmark className="w-9 h-9 text-white" />
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-[#0B1D3A] uppercase tracking-wider block mb-1">
+                HALL OF FAME
+              </span>
+              <h3 className="font-bold text-[#0B1D3A] text-sm leading-snug">
+                IBBA Hall of Fame Inductee
+              </h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION 4: IBBA BANNER BLOCK */}
+      <section className="max-w-[1615px] mx-auto px-6 lg:px-12 w-full">
+        <div className="bg-orange-50/60 border border-orange-200 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 my-8 shadow-xs">
+          <div className="shrink-0">
+            <img 
+              src="src/images5/ibba-logo-banner.png" 
+              alt="International Business Brokers Association (IBBA)" 
+              className="h-14 object-contain"
+              onError={(e) => { e.currentTarget.src = ibbaLogoFallback; }} 
+            />
+          </div>
+          <div className="flex-1 text-sm font-medium text-[#0B1D3A] leading-relaxed">
+            <p>
+              The International Business Broker Association (IBBA) is the leading international not-for-profit association of Business Brokers. IBBA sets the standards for professionalism, ethics, and educational programs within the industry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: TWO-COLUMN CREDENTIALS & DEVELOPER GRID */}
+      <section className="max-w-[1615px] mx-auto px-6 lg:px-12 w-full mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          {/* Left Column: PROFESSIONAL CREDENTIALS */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-6 pb-3 border-b border-slate-100">
+                <Award className="w-6 h-6 text-[#FF4500]" />
+                <h2 className="text-lg font-extrabold text-[#0B1D3A] uppercase tracking-wide">
+                  PROFESSIONAL CREDENTIALS
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                
+                {/* Badge 1: CBI */}
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <img 
+                      src="src/images5/cbi-badge.png" 
+                      alt="CBI Badge" 
+                      className="w-40 h-40 object-contain"
+                      onError={(e) => { e.currentTarget.src = cbiLogoFallback; }} 
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-[#0B1D3A] text-sm leading-snug">
+                      LIFETIME CERTIFIED BUSINESS INTERMEDIARY (CBI)
+                    </h3>
+                    <p className="text-xs text-[#0B1D3A] mt-1 leading-relaxed">
+                      The industry's premier designation for professional business brokers.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Badge 2: M&AMI */}
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <img 
+                      src="src/images5/mami-badge.png" 
+                      alt="M&AMI Badge" 
+                      className="w-40 h-40 object-contain"
+                      onError={(e) => { e.currentTarget.src = mamiLogoFallback; }} 
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-[#0B1D3A] text-sm leading-snug">
+                      LIFETIME MASTER MERGERS & ACQUISITIONS INTERMEDIARY (M&AMI)
+                    </h3>
+                    <p className="text-xs text-[#0B1D3A] mt-1 leading-relaxed">
+                      Recognition of advanced expertise and decades of successful deal-making.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Badge 3: MBA Badge */}
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0">
+                    <img 
+                      src="src/images5/mba.png" 
+                      alt="MBA Badge" 
+                      className="w-40 h-40 object-contain"
+                      onError={(e) => { e.currentTarget.src = cbiLogoFallback; }} 
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-[#0B1D3A] text-sm leading-snug">
+                      MASTER OF BUSINESS ADMINISTRATION (MBA)
+                    </h3>
+                    <p className="text-xs text-[#0B1D3A] mt-1 leading-relaxed">
+                      Advanced education in business strategy, finance, management, and leadership.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: DEVELOPER • CREATOR • INNOVATOR */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-6 pb-3 border-b border-slate-100">
+                <Lightbulb className="w-6 h-6 text-[#FF4500]" />
+                <h2 className="text-lg font-extrabold text-[#0B1D3A] uppercase tracking-wide">
+                  DEVELOPER • CREATOR • INNOVATOR
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                
+                {/* Block 1: FastStart */}
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0 w-64 flex items-center justify-center">
+                    <img 
+                      src="src/images5/FastStart_Logo.png" 
+                      alt="FastStart Logo" 
+                      className="w-full object-contain"
+                      onError={(e) => { e.currentTarget.src = fastStartFallback; }} 
+                    />
+                  </div>
+                  <div className="flex-1 text-right">
+                    <p className="text-xs sm:text-sm text-[#0B1D3A] leading-relaxed">
+                      Developer of the <strong className="text-[#0B1D3A] font-bold">FastStart Online Broker Training Program</strong>—the step-by-step system designed specifically to help new brokers succeed.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Block 2: PricePoint */}
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0 w-64 flex items-center justify-center">
+                    <img 
+                      src="src/images5/PricePoint_Logo.png" 
+                      alt="PricePoint Logo" 
+                      className="w-full object-contain pt-[130px]"
+                      onError={(e) => { e.currentTarget.src = pricePointFallback; }} 
+                    />
+                  </div>
+                  <div className="flex-1 text-right">
+                    <p className="text-xs sm:text-sm text-[#0B1D3A] leading-relaxed">
+                      Developer of <strong className="text-[#0B1D3A] font-bold">PricePoint™</strong>, the professional valuation software trusted by business brokers throughout North America.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Block 3: Coaching */}
+                <div className="flex items-center gap-4">
+                  <div className="shrink-0 w-64 flex items-center justify-center text-[#FF4500] pt-[50px]">
+                    <GraduationCap className="w-32 h-32 text-[#FF4500]" />
+                  </div>
+                  <div className="flex-1 text-right">
+                    <h3 className="font-extrabold text-[#0B1D3A] text-xs sm:text-sm uppercase tracking-wide">
+                      OVER 400 BUSINESS BROKERS COACHED
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#0B1D3A] mt-1 leading-relaxed">
+                      Personally coached over 400 aspiring and experienced brokers to help them grow successful business brokerage practices.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION 6: STUDENT TESTIMONIAL CARD ("WHAT STUDENTS HAVE ACHIEVED") */}
+      <section className="max-w-[1615px] mx-auto px-6 lg:px-12 w-full my-8">
+        <div className="border border-orange-200 rounded-2xl p-6 bg-white shadow-xs">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Side: Testimonial Card */}
+            <div className="lg:col-span-6 bg-slate-50 rounded-xl border border-slate-200 overflow-hidden flex flex-col sm:flex-row">
+              <div className="w-full sm:w-2/5 shrink-0 h-48 sm:h-auto">
+                <img 
+                  src="src/images5/clark-bell-bowtie.png" 
+                  alt="Clark Bell" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => { e.currentTarget.src = clarkBellFallback; }} 
+                />
+              </div>
+              <div className="p-6 flex-1 space-y-4 flex flex-col justify-center text-center">
+                <div>
+                  <div className="flex justify-center text-amber-400 mb-1">
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400" />
+                  </div>
+                  <h3 className="font-extrabold text-[#0B1D3A] text-base sm:text-lg">
+                    "In My First Year I Made $690,000!"
+                  </h3>
+                </div>
+
+                <blockquote className="text-xs sm:text-sm text-[#0B1D3A] italic leading-relaxed text-center">
+                  "I entered business brokerage with the guidance, training, and systems provided through FastStart. In my first year, I generated approximately $699,000 in transaction fees. The step-by-step approach helped me avoid costly mistakes and focus on activities that actually produce results."
+                </blockquote>
+
+                <p className="text-xs font-bold text-[#0B1D3A] text-center">
+                  — Clark Bell, <span className="font-normal text-[#0B1D3A]">Former FastStart Student</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Right Side: THE RESULTS SPEAK FOR THEMSELVES */}
+            <div className="lg:col-span-6 space-y-4">
+              <h2 className="text-lg font-extrabold text-[#0B1D3A] uppercase tracking-wide">
+                WHAT STUDENTS HAVE ACHIEVED
+              </h2>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0B1D3A] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B1D3A]">
+                    Over 400 business brokers coached
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0B1D3A] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B1D3A]">
+                    Thousands of transactions successfully closed
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0B1D3A] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B1D3A]">
+                    Business brokers operating throughout North America
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0B1D3A] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B1D3A]">
+                    Training developed by an IBBA Hall of Fame Inductee
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#0B1D3A] shrink-0 mt-0.5" />
+                  <span className="text-xs sm:text-sm font-semibold text-[#0B1D3A]">
+                    Proven systems refined through 25+ years of transaction experience
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: THE LEN KRICK DIFFERENCE (UNIFIED ICON COLORS: ALL SOLID ORANGE) */}
+      <section className="max-w-[1615px] mx-auto px-6 lg:px-12 w-full mb-12">
+        <h2 className="text-center text-lg sm:text-xl font-extrabold text-[#0B1D3A] uppercase tracking-wider mb-8">
+          THE LEN KRICK DIFFERENCE
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          {/* Card 1 */}
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs text-center flex flex-col items-center">
+            <div className="bg-orange-50 text-[#FF4500] p-4 rounded-full w-14 h-14 mx-auto mb-3 flex items-center justify-center shrink-0">
+              <Target className="w-7 h-7 text-[#FF4500]" />
+            </div>
+            <h3 className="font-extrabold text-[#0B1D3A] text-sm uppercase mb-2">
+              REAL-WORLD EXPERIENCE
+            </h3>
+            <p className="text-xs text-[#0B1D3A] leading-relaxed">
+              25+ years as a Business Broker, transaction advisor, and industry leader.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs text-center flex flex-col items-center">
+            <div className="bg-orange-50 text-[#FF4500] p-4 rounded-full w-14 h-14 mx-auto mb-3 flex items-center justify-center shrink-0">
+              <GraduationCap className="w-7 h-7 text-[#FF4500]" />
+            </div>
+            <h3 className="font-extrabold text-[#0B1D3A] text-sm uppercase mb-2">
+              EDUCATOR AT HEART
+            </h3>
+            <p className="text-xs text-[#0B1D3A] leading-relaxed">
+              A teacher who turns complex concepts into simple, actionable steps.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs text-center flex flex-col items-center">
+            <div className="bg-orange-50 text-[#FF4500] p-4 rounded-full w-14 h-14 mx-auto mb-3 flex items-center justify-center shrink-0">
+              <TrendingUp className="w-7 h-7 text-[#FF4500]" />
+            </div>
+            <h3 className="font-extrabold text-[#0B1D3A] text-sm uppercase mb-2">
+              PROVEN SYSTEMS
+            </h3>
+            <p className="text-xs text-[#0B1D3A] leading-relaxed">
+              Creator of the tools, training, and processes that produce measurable results.
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs text-center flex flex-col items-center">
+            <div className="bg-orange-50 text-[#FF4500] p-4 rounded-full w-14 h-14 mx-auto mb-3 flex items-center justify-center shrink-0">
+              <Lightbulb className="w-7 h-7 text-[#FF4500]" />
+            </div>
+            <h3 className="font-extrabold text-[#0B1D3A] text-sm uppercase mb-2">
+              LOGICAL & EASY TO UNDERSTAND
+            </h3>
+            <p className="text-xs text-[#0B1D3A] leading-relaxed">
+              Training designed to be practical, straightforward, and immediately useful in the real world.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION 8: FOOTER CTA BANNER */}
