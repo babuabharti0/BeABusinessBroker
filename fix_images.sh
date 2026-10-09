@@ -1,0 +1,6 @@
+sed -i 's|<img src="/BeABusinessBroker Logo.png" alt="BeABusinessBroker Logo" className="h-20 object-contain" />|<img src={logoImg} alt="BeABusinessBroker Logo" className="h-20 object-contain" />|g' src/HomePage.tsx
+sed -i 's|<img src="/Warren Buffet Quote.png" alt="Warren Buffett Quote" className="w-full h-auto object-contain" />|<img src={buffettImg} alt="Warren Buffett Quote" className="w-full h-auto object-contain" />|g' src/HomePage.tsx
+sed -i 's|<img src="/Clark Bell.png" alt="Clark Bell" className="w-24 h-24 rounded object-cover absolute bottom-8 right-8 shadow-md" />|<img src={clarkImg} alt="Clark Bell" className="w-24 h-24 rounded object-cover absolute bottom-8 right-8 shadow-md" />|g' src/HomePage.tsx
+sed -i 's|<img src="/IBBA Logo.png" alt="IBBA Logo" className="h-12 object-contain" />|<img src={ibbaLogo} alt="IBBA Logo" className="h-12 object-contain" />|g' src/HomePage.tsx
+sed -i 's|<img src="/M&A Source Logo.jpg" alt="M&A Source Logo" className="h-12 object-contain" />|<img src={maLogo} alt="M&A Source Logo" className="h-12 object-contain" />|g' src/HomePage.tsx
+sed -i 's|<img src="/Len Krick'"'"'s Photo.jpg" alt="Len Krick" className="absolute bottom-0 right-0 w-64 object-contain" />|<img src={lenKrickImg} alt="Len Krick" className="absolute bottom-0 right-0 w-64 object-contain" />|g' src/HomePage.tsx

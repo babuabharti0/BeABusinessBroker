@@ -1,0 +1,44 @@
+      <section className="w-full">
+        <div className="bg-[#0B1D3A] text-white py-4 px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg w-full">
+          <div className="flex items-center gap-5">
+            <div className="shrink-0">
+              <img 
+                src="src/images5/trophy.png" 
+                alt="Trophy" 
+                className="h-12 w-auto object-contain" 
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+              />
+            </div>
+            <div>
+              <h3 className="font-extrabold text-base sm:text-lg uppercase tracking-wide text-white">
+                YOUR SUCCESS IS OUR MISSION.
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-1">
+                Take the next step toward financial freedom and a rewarding career in business brokerage.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+            <a 
+              href="https://www.FastStart.Training" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-[#FF4500] hover:bg-[#E03E00] text-white px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer inline-flex"
+            >
+              <span>GET STARTED TODAY</span>
+              <ChevronRight className="w-4 h-4" />
+            </a>
+            <button 
+              onClick={() => onNavigate?.('begin')}
+              className="border border-slate-400 hover:border-white text-slate-200 hover:text-white px-6 py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-2"
+            >
+              <Mail className="w-4 h-4 text-[#FF4500]" />
+              <span>REQUEST INFORMATION</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

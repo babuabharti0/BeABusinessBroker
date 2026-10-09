@@ -1,0 +1,242 @@
+import React, { useState } from 'react';
+import { 
+  Trophy, 
+  Award, 
+  BookOpen, 
+  Users, 
+  Building2, 
+  GraduationCap, 
+  TrendingUp, 
+  Lightbulb, 
+  CheckCircle2, 
+  Phone, 
+  Mail, 
+  Star, 
+  Target,
+  ChevronRight,
+  Landmark
+} from 'lucide-react';
+
+// Fallback image imports from existing image directories
+import logoImgFallback from './images/BeABusinessBrokerLogo.png';
+import lenKrickPhotoFallback from "./images5/LenKrick'sPhoto.jpg";
+import ibbaLogoFallback from './images5/IBBALogo.png';
+import cbiLogoFallback from "./images5/IBBA'sCBIlogo.png";
+import mamiLogoFallback from "./images5/IBBA'sM&AMILogo.jpg";
+import tomWestFallback from './images5/TomWestAward.jpg';
+import hallOfFameFallback from './images5/IBBAHallofFameAward.jpg';
+import clarkBellFallback from './images5/ClarkBell.png';
+import fastStartFallback from './images5/FastStart.jpg';
+import pricePointFallback from './images5/PricePointLogo.png';
+
+import { PageKey } from './App';
+
+interface AboutPageProps {
+  onNavigate?: (page: PageKey) => void;
+}
+
+export default function AboutPage({ onNavigate }: AboutPageProps) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen font-sans bg-[#F8FAFC] text-slate-800">
+      
+      {/* SECTION 1: NAVIGATION BAR */}
+      <nav className="w-full bg-white border-b border-gray-200 shadow-xs sticky top-0 z-50">
+        <div className="w-full max-w-none px-4 sm:px-8 lg:px-12 py-1 relative flex items-center justify-between gap-4">
+          <button 
+            onClick={() => onNavigate?.('home')} 
+            className="relative z-20 -my-2 flex items-center shrink-0 cursor-pointer"
+          >
+            <div className="relative h-14 md:h-20 lg:h-[130px] w-auto">
+              <img 
+                src="src/images5/BeABusinessBroker_Logo.png" 
+                alt="Be A Business Broker" 
+                width="420"
+                height="168"
+                loading="eager"
+                fetchPriority="high"
+                className="h-14 md:h-20 lg:h-[130px] w-auto object-contain drop-shadow-md z-30 relative transition-none"
+                onError={(e) => { e.currentTarget.src = logoImgFallback; }} 
+              />
+            </div>
+          </button>
+
+          <div className="hidden lg:flex items-center justify-between flex-1 mx-4 xl:mx-8 gap-2 xl:gap-4">
+            <button 
+              onClick={() => onNavigate?.('home')}
+              className="uppercase text-[#0B1D3A] font-bold text-xs hover:text-[#FF4500] transition-colors py-1 cursor-pointer whitespace-nowrap"
+            >
+              WHY BUSINESS BROKERAGE?
+            </button>
+            <button 
+              onClick={() => onNavigate?.('begin')}
+              className="uppercase text-[#0B1D3A] font-bold text-xs hover:text-[#FF4500] transition-colors py-1 cursor-pointer whitespace-nowrap"
+            >
+              HOW DO I BEGIN?
+            </button>
+            <button 
+              onClick={() => onNavigate?.('firms')}
+              className="uppercase text-[#0B1D3A] font-bold text-xs hover:text-[#FF4500] transition-colors py-1 cursor-pointer whitespace-nowrap"
+            >
+              FIRMS ARE LOOKING FOR YOU
+            </button>
+            <button 
+              onClick={() => onNavigate?.('assessment')}
+              className="uppercase text-[#0B1D3A] font-bold text-xs hover:text-[#FF4500] transition-colors py-1 cursor-pointer whitespace-nowrap"
+            >
+              BUSINESS BROKERAGE ASSESSMENT
+            </button>
+            <button 
+              onClick={() => onNavigate?.('training')}
+              className="uppercase text-[#0B1D3A] font-bold text-xs hover:text-[#FF4500] transition-colors py-1 cursor-pointer whitespace-nowrap"
+            >
+              FASTSTART ONLINE TRAINING™
+            </button>
+            <button 
+              onClick={() => onNavigate?.('stories')}
+              className="uppercase text-[#0B1D3A] font-bold text-xs hover:text-[#FF4500] transition-colors py-1 cursor-pointer whitespace-nowrap"
+            >
+              SUCCESS STORIES
+            </button>
+            <button 
+              onClick={() => onNavigate?.('about')}
+              className="uppercase text-[#FF4500] font-bold text-xs border-b-2 border-[#FF4500] py-1 cursor-pointer whitespace-nowrap"
+            >
+              ABOUT LEN KRICK
+            </button>
+          </div>
+
+          <div className="hidden lg:block shrink-0">
+            <a 
+              href="https://www.FastStart.Training" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-[#FF4500] hover:bg-[#E03E00] text-white px-5 py-2.5 rounded-md font-bold text-xs tracking-wider transition-colors shadow-xs cursor-pointer inline-block"
+            >
+              GET STARTED
+            </a>
+          </div>
+
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+            className="lg:hidden text-[#0B1D3A] text-2xl focus:outline-none p-2 cursor-pointer z-30"
+            aria-label="Toggle mobile menu"
+          >
+            <i className={`fa-solid ${isMobileMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full z-50 left-0 top-full flex flex-col">
+            <button onClick={() => { onNavigate?.('home'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#0B1D3A] text-left cursor-pointer">WHY BUSINESS BROKERAGE?</button>
+            <button onClick={() => { onNavigate?.('begin'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#0B1D3A] text-left cursor-pointer">HOW DO I BEGIN?</button>
+            <button onClick={() => { onNavigate?.('firms'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#0B1D3A] text-left cursor-pointer">FIRMS ARE LOOKING FOR YOU</button>
+            <button onClick={() => { onNavigate?.('assessment'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#0B1D3A] text-left cursor-pointer">BUSINESS BROKERAGE ASSESSMENT</button>
+            <button onClick={() => { onNavigate?.('training'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#0B1D3A] text-left cursor-pointer">FASTSTART ONLINE TRAINING™</button>
+            <button onClick={() => { onNavigate?.('stories'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#0B1D3A] text-left cursor-pointer">SUCCESS STORIES</button>
+            <button onClick={() => { onNavigate?.('about'); setIsMobileMenuOpen(false); }} className="px-6 py-4 border-b border-gray-50 text-sm font-bold text-[#FF4500] text-left cursor-pointer">ABOUT LEN KRICK</button>
+            <div className="px-6 py-4">
+              <a href="https://www.FastStart.Training" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-[#FF4500] text-white px-5 py-3 rounded-lg font-bold">GET STARTED</a>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* SECTION 2: HERO SECTION (DARK NAVY BACKGROUND #0B1D3A) */}
+      <section className="bg-[#0B1D3A] overflow-hidden relative text-white py-12 px-6 lg:px-12 w-full lg:h-[780px]">
+        <div className="max-w-[1615px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10 h-full">
+          
+          {/* Left Column (40% Width) */}
+          <div className="w-full lg:w-[40%] space-y-4">
+            <div className="text-[#FF4500] font-bold tracking-widest text-[17px] mb-2 uppercase">
+              ABOUT LEN KRICK —
+            </div>
+
+            <h1 className="text-[43px] lg:text-[58px] font-extrabold leading-tight text-white">
+              25+ Years Helping Business Brokers Succeed
+            </h1>
+
+            <p className="text-slate-200 text-[17px] md:text-[19px] leading-relaxed">
+              Len Krick, MBA, has spent over 25 years building, leading, coaching, and advancing the business brokerage profession.
+            </p>
+
+            <p className="text-slate-300 text-[14px] md:text-[17px] leading-relaxed">
+              As an industry leader, educator, software developer, and Hall of Fame inductee, Len's mission is simple:
+            </p>
+
+            <div className="p-4 rounded-xl bg-slate-900/80 border border-[#FF4500]/40 shadow-inner">
+              <p className="text-[#FF4500] font-bold text-[17px] md:text-[19px] leading-snug">
+                "To provide aspiring and experienced business brokers with the knowledge, tools, systems, and confidence to build profitable and rewarding careers."
+              </p>
+            </div>
+          </div>
+
+          {/* Center Column (30% Width) */}
+          <div className="w-full lg:w-[389.656px] lg:h-[550px] pl-0 flex justify-center items-center overflow-visible">
+            <div className="relative h-full w-auto bg-transparent rounded-xl overflow-visible animate-pulse">
+              <img 
+                src="src/images5/len-krick-hero.png" 
+                alt="Len Krick MBA" 
+                width="360"
+                height="504"
+                loading="eager"
+                fetchPriority="high"
+                className="h-[550px] w-auto object-contain mx-auto mix-blend-lighten scale-150 transition-all duration-700 ease-in-out opacity-0"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%), linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%), linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%)',
+                  maskComposite: 'intersect',
+                  WebkitMaskComposite: 'source-in'
+                }}
+                onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.parentElement?.classList.remove('animate-pulse'); }}
+                onError={(e) => { e.currentTarget.src = lenKrickPhotoFallback; }} 
+              />
+            </div>
+          </div>
+
+          {/* Right Column (32% Width) */}
+          <div className="w-full lg:w-[32%] flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-3 overflow-visible">
+            <div className="relative h-[560px] sm:h-[640px] lg:h-[700px] bg-transparent rounded-xl overflow-visible animate-pulse">
+              <img 
+                src="src/images5/ibba-trophies.png" 
+                alt="IBBA Crystal Trophies" 
+                width="500"
+                height="700"
+                loading="eager"
+                fetchPriority="high"
+                className="h-[560px] sm:h-[640px] lg:h-[700px] w-auto object-contain mix-blend-screen scale-200 transition-all duration-700 ease-in-out opacity-0"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%), linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%), linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%)',
+                  maskComposite: 'intersect',
+                  WebkitMaskComposite: 'source-in'
+                }}
+                onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.parentElement?.classList.remove('animate-pulse'); }}
+                onError={(e) => { e.currentTarget.src = tomWestFallback; }} 
+              />
+            </div>
+            <div className="relative h-[560px] sm:h-[640px] lg:h-[700px] bg-transparent rounded-xl overflow-visible animate-pulse">
+              <img 
+                src="src/images5/IBBAHallofFameAward.jpg" 
+                alt="IBBA Hall of Fame Award" 
+                width="500"
+                height="700"
+                loading="eager"
+                fetchPriority="high"
+                className="h-[560px] sm:h-[640px] lg:h-[700px] w-auto object-contain mix-blend-screen scale-200 transition-all duration-700 ease-in-out opacity-0"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%), linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%), linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 40px), transparent 100%)',
+                  maskComposite: 'intersect',
+                  WebkitMaskComposite: 'source-in'
+                }}
+                onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.parentElement?.classList.remove('animate-pulse'); }}
+                onError={(e) => { e.currentTarget.src = hallOfFameFallback; }} 
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+

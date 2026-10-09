@@ -1,0 +1,6 @@
+{
+  "name": "Be A Business Broker",
+  "description": "FastStart Business Brokerage Training & Career Information Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

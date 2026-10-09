@@ -1,0 +1,595 @@
+     1	import logoImg from './images/BeABusinessBrokerLogo.png';
+     2	import clarkImg from './images/ClarkBell.png';
+     3	import fastStartImg from './images/FastStart.jpg';
+     4	import ibbaLogo from './images/IBBALogo.png';
+     5	import lenKrickImg from "./images/LenKrick'sPhoto.jpg";
+     6	import maLogo from './images/M&ASourceLogo.jpg';
+     7	import buffettImg from './images/WarrenBuffetQuote.png';
+     8	import meetingImg from './images/meeting.png';
+     9	import chatBgImg from './images/Chat.png';
+    10	import icon1 from './images/icon1.png';
+    11	import icon2 from './images/icon2.png';
+    12	import icon3 from './images/icon3.png';
+    13	import icon4 from './images/icon4.png';
+    14	import icon5 from './images/icon5.png';
+    15	import icon6 from './images/icon6.png';
+    16	import icon01 from './images/icon01.png';
+    17	import icon02 from './images/icon02.png';
+    18	import icon03 from './images/icon03.png';
+    19	import icon04 from './images/icon04.png';
+    20	import icon05 from './images/icon05.png';
+    21	import icon06 from './images/icon06.png';
+    22	import icon07 from './images/icon07.png';
+    23	
+    24	import React, { useState } from 'react';
+    25	import { 
+    26	  CheckCircle2, 
+    27	  Check, 
+    28	  ArrowRight,
+    29	  DollarSign,
+    30	  Clock,
+    31	  Rocket,
+    32	  Star,
+    33	  Heart,
+    34	  Brain,
+    35	  Building2,
+    36	  UsersRound,
+    37	  Briefcase,
+    38	  Calculator,
+    39	  Store,
+    40	  Landmark,
+    41	  Quote
+    42	} from 'lucide-react';
+    43	
+    44	
+    45	import { PageKey } from './App';
+    46	import Navbar from './Navbar';
+    47	
+    48	interface HomePageProps {
+    49	  onNavigate?: (page: PageKey) => void;
+    50	}
+    51	
+    52	export default function HomePage({ onNavigate }: HomePageProps) {
+    53	  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    54	
+    55	  return (
+    56	    <div className="min-h-screen font-sans bg-white overflow-x-hidden max-w-full">
+    57	      <img src={chatBgImg} alt="" aria-hidden="true" className="hidden" fetchPriority="high" />
+    58	      {/* GLOBAL NAVBAR */}
+    59	      <Navbar currentPage="home" onNavigate={onNavigate} />
+    60	
+    61	      <main className="w-full">
+    62	        {/* SECTION 2: HERO */}
+    63	        <section 
+    64	          className="relative text-white pt-8 lg:pt-16 pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 xl:px-10 overflow-hidden bg-cover bg-[#010B21]"
+    65	          style={{ backgroundImage: `url(${chatBgImg})`, backgroundPosition: 'center 20%' }}
+    66	        >
+    67	          <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-center w-full max-w-none">
+    68	            {/* Left Column */}
+    69	            <div className="max-w-3xl relative w-full lg:w-1/2">
+    70	              <div className="relative z-10 lg:w-[90%] pr-4 lg:pr-0">
+    71	                <h1 className="text-2xl sm:text-3xl lg:text-6xl xl:text-[67px] font-black mb-3 leading-tight">
+    72	                  Why Become a Business Broker?
+    73	                </h1>
+    74	                <p className="text-xl lg:text-2xl mb-8 font-medium text-slate-200 max-w-[666px]">
+    75	                  A Career with Unlimited Income Potential, Professional Freedom, and Long-Term Opportunity.
+    76	                </p>
+    77	                <div className="bg-white text-gray-900 rounded-lg p-6 shadow-xl border-l-8 border-[#FF4A00] flex items-start gap-4 max-w-[575px]">
+    78	                  <CheckCircle2 className="text-[#FF4A00] shrink-0 mt-1 w-7 h-7" />
+    79	                  <div className="flex-1">
+    80	                    <h3 className="text-[#FF4A00] font-extrabold text-xl sm:text-2xl mb-1">NO PRIOR EXPERIENCE REQUIRED</h3>
+    81	                    <p className="text-base sm:text-lg text-gray-700">We provide the training, tools, and support you need to succeed—even if you're starting from scratch.</p>
+    82	                  </div>
+    83	                </div>
+    84	              </div>
+    85	            </div>
+    86	            
+    87	            {/* Right Column / Warren Buffett Card */}
+    88	            <div className="flex justify-center lg:justify-end w-full lg:w-1/2 p-4 sm:p-6 lg:p-0">
+    89	              <div className="border-2 border-[#FBBF24] rounded-lg relative w-full max-w-[574px] bg-slate-800/50 animate-pulse overflow-hidden">
+    90	                <img 
+    91	                  src={buffettImg} 
+    92	                  alt="Warren Buffett" 
+    93	                  width="553" 
+    94	                  height="368" 
+    95	                  loading="eager" 
+    96	                  fetchPriority="high" 
+    97	                  className="w-full h-auto object-cover transition-opacity duration-700 ease-in-out opacity-0 block" 
+    98	                  onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.parentElement?.classList.remove('animate-pulse'); }}
+    99	                />
+   100	              </div>
+   101	            </div>
+   102	          </div>
+   103	          {/* Bottom Ribbon */}
+   104	          <div className="absolute bottom-0 left-0 z-10 bg-black/60 w-full py-4 flex flex-col sm:flex-row gap-3 sm:gap-0 justify-between items-center px-4 sm:px-12 lg:px-16 text-[#FBBF24] font-bold uppercase text-xs sm:text-sm border-t border-gray-800 shadow-inner">
+   105	            <span className="text-left py-1">⚙ LOW STARTUP COST</span>
+   106	            <div className="hidden sm:block w-px h-5 bg-gray-600/80 my-2 sm:my-0"></div>
+   107	            <span className="text-center py-1">👤 FLEXIBLE LIFESTYLE</span>
+   108	            <div className="hidden sm:block w-px h-5 bg-gray-600/80 my-2 sm:my-0"></div>
+   109	            <span className="text-right py-1">📊 UNLIMITED INCOME POTENTIAL</span>
+   110	          </div>
+   111	        </section>
+   112	
+   113	        {/* SECTION 3: FEES & REASONS GRID */}
+   114	        <section className="py-8 lg:py-16 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 w-full max-w-none">
+   115	          {/* Left (Col span 4) */}
+   116	          <div className="lg:col-span-4 w-full text-center border-2 border-[#F57E45] rounded-xl p-6 shadow-sm bg-white flex flex-col justify-between">
+   117	            <div>
+   118	              <h2 className="text-[#1E3A8A] font-bold text-2xl sm:text-[28px]">TYPICAL TRANSACTION FEES</h2>
+   119	              <div className="text-4xl sm:text-6xl text-[#F57E45] font-extrabold my-2">10% - 12%</div>
+   120	              <div className="text-xl sm:text-2xl font-bold">OF SELLING PRICE</div>
+   121	              <p className="mb-4 text-gray-800">For businesses selling below $1,000,000.</p>
+   122	              
+   123	              <div className="flex flex-col items-center gap-2 mt-4 font-bold text-gray-700 text-center">
+   124	                <div className="flex items-center gap-2">
+   125	                  $500,000 business <span className="text-[#FF4A00]">➔</span> $50,000 - $60,000 fee
+   126	                </div>
+   127	                <div className="flex items-center gap-2">
+   128	                  $750,000 business <span className="text-[#FF4A00]">➔</span> $75,000 - $90,000 fee
+   129	                </div>
+   130	                <div className="flex items-center gap-2">
+   131	                  $1,000,000 business <span className="text-[#FF4A00]">➔</span> $100,000 - $120,000 fee
+   132	                </div>
+   133	              </div>
+   134	            </div>
+   135	            <p className="text-xs text-gray-500 mt-6 italic">Fees may vary based on deal size, complexity , and services provided</p>
+   136	          </div>
+   137	
+   138	          {/* Right (Col span 8) */}
+   139	          <div className="lg:col-span-8 w-full text-center">
+   140	            <h2 className="text-[#1E3A8A] font-bold text-xl mb-8 text-center">POWERFUL REASONS TO CHOOSE THIS CAREER</h2>
+   141	            <div className="w-full bg-white">
+   142	              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-[1px] bg-transparent lg:bg-gray-200 w-full font-bold">
+   143	                <div className="flex flex-col items-center text-center bg-white p-3 sm:p-4 h-full justify-between gap-2 border lg:border-0 border-gray-200 rounded-xl lg:rounded-none shadow-sm lg:shadow-none">
+   144	                  <img src={icon1} alt="Income Potential" loading="lazy" decoding="async" className="w-24 h-24 sm:w-28 sm:h-28 object-contain shrink-0" />
+   145	                  <h3 className="text-[#1E3A8A] font-bold text-sm leading-snug">Unlimited Income Potential</h3>
+   146	                  <p className="text-gray-600 font-bold text-xs leading-relaxed">One successful transaction can generate fees that exceed months of traditional income.</p>
+   147	                </div>
+   148	
+   149	                <div className="flex flex-col items-center text-center bg-white p-3 sm:p-4 h-full justify-between gap-2 border lg:border-0 border-gray-200 rounded-xl lg:rounded-none shadow-sm lg:shadow-none">
+   150	                  <img src={icon2} alt="Flexible Lifestyle" loading="lazy" decoding="async" className="w-24 h-24 sm:w-28 sm:h-28 object-contain shrink-0" />
+   151	                  <h3 className="text-[#1E3A8A] font-bold text-sm leading-snug">Flexible Lifestyle</h3>
+   152	                  <p className="text-gray-600 font-bold text-xs leading-relaxed">Work from home, set your own schedule, and build your business around your life.</p>
+   153	                </div>
+   154	
+   155	                <div className="flex flex-col items-center text-center bg-white p-3 sm:p-4 h-full justify-between gap-2 border lg:border-0 border-gray-200 rounded-xl lg:rounded-none shadow-sm lg:shadow-none">
+   156	                  <img src={icon3} alt="Low Startup Cost" loading="lazy" decoding="async" className="w-24 h-24 sm:w-28 sm:h-28 object-contain shrink-0" />
+   157	                  <h3 className="text-[#1E3A8A] font-bold text-sm leading-snug">Low Startup Cost</h3>
+   158	                  <p className="text-gray-600 font-bold text-xs leading-relaxed">No franchise fees, inventory, or expensive office required. Start lean and grow.</p>
+   159	                </div>
+   160	
+   161	                <div className="flex flex-col items-center text-center bg-white p-3 sm:p-4 h-full justify-between gap-2 border lg:border-0 border-gray-200 rounded-xl lg:rounded-none shadow-sm lg:shadow-none">
+   162	                  <img src={icon4} alt="Never Age Out" loading="lazy" decoding="async" className="w-24 h-24 sm:w-28 sm:h-28 object-contain shrink-0" />
+   163	                  <h3 className="text-[#1E3A8A] font-bold text-sm leading-snug">Never Age Out</h3>
+   164	                  <p className="text-gray-600 font-bold text-xs leading-relaxed">Experience, relationships, and judgment become more valuable over time, not less.</p>
+   165	                </div>
+   166	
+   167	                <div className="flex flex-col items-center text-center bg-white p-3 sm:p-4 h-full justify-between gap-2 border lg:border-0 border-gray-200 rounded-xl lg:rounded-none shadow-sm lg:shadow-none">
+   168	                  <img src={icon5} alt="Meaningful Work" loading="lazy" decoding="async" className="w-24 h-24 sm:w-28 sm:h-28 object-contain shrink-0" />
+   169	                  <h3 className="text-[#1E3A8A] font-bold text-sm leading-snug">Meaningful Work</h3>
+   170	                  <p className="text-gray-600 font-bold text-xs leading-relaxed">Help business owners successfully transition on their terms and create win-win outcomes.</p>
+   171	                </div>
+   172	
+   173	                <div className="flex flex-col items-center text-center bg-white p-3 sm:p-4 h-full justify-between gap-2 border lg:border-0 border-gray-200 rounded-xl lg:rounded-none shadow-sm lg:shadow-none">
+   174	                  <img src={icon6} alt="Mentally Stimulating" loading="lazy" decoding="async" className="w-24 h-24 sm:w-28 sm:h-28 object-contain shrink-0" />
+   175	                  <h3 className="text-[#1E3A8A] font-bold text-sm leading-snug">Mentally Stimulating</h3>
+   176	                  <p className="text-gray-600 font-bold text-xs leading-relaxed">Every business is different, and every transaction is different. You'll never stop learning.</p>
+   177	                </div>
+   178	              </div>
+   179	            </div>
+   180	          </div>
+   181	        </section>
+   182	
+   183	        {/* SECTION 4: WHO SUCCEEDS */}
+   184	        <section className="py-12 bg-gray-50 text-center px-4 sm:px-6 lg:px-8 xl:px-10 w-full">
+   185	          <div className="w-full max-w-none">
+   186	            <h2 className="text-[#1E3A8A] text-2xl font-bold">Who Succeeds as a Business Broker?</h2>
+   187	            <p className="text-gray-600 mt-2">This career is ideal for professionals who are motivated, relationships-driven, and want more control of their future.</p>
+   188	            
+   189	            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-5 mt-8 w-full">
+   190	              <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-shadow h-full w-full text-center">
+   191	                <div className="w-16 h-16 rounded-full bg-[#FF4A00]/10 flex items-center justify-center mb-4 border border-[#FF4A00]/20">
+   192	                  <Building2 className="w-8 h-8 text-[#1E3A8A]" strokeWidth={1.5} />
+   193	                </div>
+   194	                <h3 className="font-bold text-[#1E3A8A] mb-2 text-[16px] leading-tight">Commercial Real Estate Brokers</h3>
+   195	                <p className="font-bold text-xs text-gray-600 leading-relaxed mt-auto">Expand your expertise and add higher-fee business sale transactions to your practice.</p>
+   196	              </div>
+   197	              <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-shadow h-full w-full text-center">
+   198	                <div className="w-16 h-16 rounded-full bg-[#FF4A00]/10 flex items-center justify-center mb-4 border border-[#FF4A00]/20">
+   199	                  <UsersRound className="w-8 h-8 text-[#1E3A8A]" strokeWidth={1.5} />
+   200	                </div>
+   201	                <h3 className="font-bold text-[#1E3A8A] mb-2 text-[16px] leading-tight">Business Coaches & Consultants</h3>
+   202	                <p className="font-bold text-xs text-gray-600 leading-relaxed mt-auto">Add exit and transition advisory services and create another high-value revenue stream.</p>
+   203	              </div>
+   204	              <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-shadow h-full w-full text-center">
+   205	                <div className="w-16 h-16 rounded-full bg-[#FF4A00]/10 flex items-center justify-center mb-4 border border-[#FF4A00]/20">
+   206	                  <Briefcase className="w-8 h-8 text-[#1E3A8A]" strokeWidth={1.5} />
+   207	                </div>
+   208	                <h3 className="font-bold text-[#1E3A8A] mb-2 text-[16px] leading-tight">Corporate Professionals & Career Changers</h3>
+   209	                <p className="font-bold text-xs text-gray-600 leading-relaxed mt-auto">Build an independent professional practice and create the freedom you've always wanted.</p>
+   210	              </div>
+   211	              <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-shadow h-full w-full text-center">
+   212	                <div className="w-16 h-16 rounded-full bg-[#FF4A00]/10 flex items-center justify-center mb-4 border border-[#FF4A00]/20">
+   213	                  <Calculator className="w-8 h-8 text-[#1E3A8A]" strokeWidth={1.5} />
+   214	                </div>
+   215	                <h3 className="font-bold text-[#1E3A8A] mb-2 text-[16px] leading-tight">Financial Planners</h3>
+   216	                <p className="font-bold text-xs text-gray-600 leading-relaxed mt-auto">Leverage financial expertise to help clients sell, buy, and transition businesses.</p>
+   217	              </div>
+   218	              <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-shadow h-full w-full text-center">
+   219	                <div className="w-16 h-16 rounded-full bg-[#FF4A00]/10 flex items-center justify-center mb-4 border border-[#FF4A00]/20">
+   220	                  <Store className="w-8 h-8 text-[#1E3A8A]" strokeWidth={1.5} />
+   221	                </div>
+   222	                <h3 className="font-bold text-[#1E3A8A] mb-2 text-[16px] leading-tight">Prior Business Owners</h3>
+   223	                <p className="font-bold text-xs text-gray-600 leading-relaxed mt-auto">Use your experience as a business owner to help others achieve a successful exit.</p>
+   224	              </div>
+   225	              <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center hover:shadow-md transition-shadow h-full w-full text-center">
+   226	                <div className="w-16 h-16 rounded-full bg-[#FF4A00]/10 flex items-center justify-center mb-4 border border-[#FF4A00]/20">
+   227	                  <Landmark className="w-8 h-8 text-[#1E3A8A]" strokeWidth={1.5} />
+   228	                </div>
+   229	                <h3 className="font-bold text-[#1E3A8A] mb-2 text-[16px] leading-tight">Bankers, Franchise Pros, Sales Execs & More</h3>
+   230	                <p className="font-bold text-xs text-gray-600 leading-relaxed mt-auto">If you love people, problem-solving, and business—this could be your perfect fit.</p>
+   231	              </div>
+   232	            </div>
+   233	          </div>
+   234	        </section>
+   235	
+   236	        {/* SECTION 5: INCOME POTENTIAL & TESTIMONIAL */}
+   237	        <section className="py-8 lg:py-16 px-4 sm:px-6 lg:px-8 xl:px-10 bg-white w-full max-w-none grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+   238	        {/* Left Column / Graph Container (lg:col-span-6) */}
+   239	        <div className="lg:col-span-6 flex flex-col h-full w-full">
+   240	          <div className="border border-gray-200 rounded-lg py-5 px-6 bg-gray-50/50 shadow-sm flex flex-col justify-between flex-1 w-full min-h-[280px]">
+   241	            <div>
+   242	              <h2 className="text-[#1E3A8A] font-bold text-2xl sm:text-[30px] uppercase mb-2">YOUR INCOME POTENTIAL</h2>
+   243	              <p className="text-gray-700 text-base sm:text-[18px] mb-4 xl:w-4/5 leading-snug">
+   244	                Most successful business brokers earn a transaction fee of <span className="text-[#F57E45] font-bold">10% – 12%</span> of the selling price for businesses under $1 million.
+   245	              </p>
+   246	            </div>
+   247	
+   248	            <h3 className="text-center font-bold text-[#0A1931] text-base mb-4">
+   249	              Illustrative Income Growth for a Business Broker
+   250	            </h3>
+   251	
+   252	            {/* Chart Outer Wrapper */}
+   253	            <div className="overflow-x-auto pb-2">
+   254	              <div className="flex items-stretch h-36 sm:h-40 min-w-[500px] sm:min-w-0 relative mb-2">
+   255	                {/* Y-Axis Column */}
+   256	                <div className="flex flex-col justify-between text-right text-[10px] sm:text-xs text-gray-600 font-semibold pr-3 py-1 border-r-2 border-gray-400 select-none min-w-[70px] sm:min-w-[85px] shrink-0">
+   257	                <span>$1,000,000</span>
+   258	                <span>$800,000</span>
+   259	                <span>$600,000</span>
+   260	                <span>$400,000</span>
+   261	                <span>$200,000</span>
+   262	                <span>$0</span>
+   263	              </div>
+   264	
+   265	              {/* Bars Container */}
+   266	              <div className="flex-1 flex items-end justify-around pl-4 pr-2 pt-4 relative border-b-2 border-gray-400">
+   267	                {/* Horizontal gridlines behind bars */}
+   268	                <div className="absolute inset-x-0 top-0 border-b border-gray-200 border-dashed pointer-events-none"></div>
+   269	                <div className="absolute inset-x-0 top-[20%] border-b border-gray-200 border-dashed pointer-events-none"></div>
+   270	                <div className="absolute inset-x-0 top-[40%] border-b border-gray-200 border-dashed pointer-events-none"></div>
+   271	                <div className="absolute inset-x-0 top-[60%] border-b border-gray-200 border-dashed pointer-events-none"></div>
+   272	                <div className="absolute inset-x-0 top-[80%] border-b border-gray-200 border-dashed pointer-events-none"></div>
+   273	
+   274	                {/* Bar 1 ($240,000 -> 24% of $1M scale) */}
+   275	                <div className="flex flex-col items-center z-10 w-12 sm:w-16 h-full justify-end">
+   276	                  <span className="text-[11px] font-bold text-gray-800 mb-1">$240,000</span>
+   277	                  <div className="w-full bg-[#1E3A8A] rounded-t-xs transition-all duration-300 hover:bg-[#152a66] h-[24%]"></div>
+   278	                </div>
+   279	
+   280	                {/* Bar 2 ($425,000 -> 42.5% of $1M scale) */}
+   281	                <div className="flex flex-col items-center z-10 w-12 sm:w-16 h-full justify-end">
+   282	                  <span className="text-[11px] font-bold text-gray-800 mb-1">$425,000</span>
+   283	                  <div className="w-full bg-[#1E3A8A] rounded-t-xs transition-all duration-300 hover:bg-[#152a66] h-[42.5%]"></div>
+   284	                </div>
+   285	
+   286	                {/* Bar 3 ($600,000 -> 60% of $1M scale) */}
+   287	                <div className="flex flex-col items-center z-10 w-12 sm:w-16 h-full justify-end">
+   288	                  <span className="text-[11px] font-bold text-gray-800 mb-1">$600,000</span>
+   289	                  <div className="w-full bg-[#1E3A8A] rounded-t-xs transition-all duration-300 hover:bg-[#152a66] h-[60%]"></div>
+   290	                </div>
+   291	
+   292	                {/* Bar 4 ($700,000 -> 70% of $1M scale) */}
+   293	                <div className="flex flex-col items-center z-10 w-12 sm:w-16 h-full justify-end">
+   294	                  <span className="text-[11px] font-bold text-gray-800 mb-1">$700,000</span>
+   295	                  <div className="w-full bg-[#1E3A8A] rounded-t-xs transition-all duration-300 hover:bg-[#152a66] h-[70%]"></div>
+   296	                </div>
+   297	
+   298	                {/* Bar 5 ($800,000 -> 80% of $1M scale) */}
+   299	                <div className="flex flex-col items-center z-10 w-12 sm:w-16 h-full justify-end">
+   300	                  <span className="text-[11px] font-bold text-gray-800 mb-1">$800,000</span>
+   301	                  <div className="w-full bg-[#1E3A8A] rounded-t-xs transition-all duration-300 hover:bg-[#152a66] h-[80%]"></div>
+   302	                </div>
+   303	              </div>
+   304	            </div>
+   305	
+   306	            {/* X-Axis Labels Row */}
+   307	            <div className="flex items-center pl-[85px] justify-around text-xs font-bold text-gray-700 mb-3 min-w-[500px] sm:min-w-0">
+   308	              <span className="w-12 sm:w-16 text-center">Year 1</span>
+   309	              <span className="w-12 sm:w-16 text-center">Year 2</span>
+   310	              <span className="w-12 sm:w-16 text-center">Year 3</span>
+   311	              <span className="w-12 sm:w-16 text-center">Year 4</span>
+   312	              <span className="w-12 sm:w-16 text-center">Year 5</span>
+   313	            </div>
+   314	            </div>
+   315	
+   316	            {/* Legend Item */}
+   317	            <div className="flex items-center justify-center gap-2 text-xs font-semibold text-gray-700 mb-3">
+   318	              <span className="w-3 h-3 bg-[#1E3A8A] inline-block rounded-xs"></span>
+   319	              <span>Potential Gross Income</span>
+   320	            </div>
+   321	
+   322	            {/* Footnotes */}
+   323	            <div className="border-t border-gray-200 pt-2.5 text-[11px] text-gray-600 space-y-0.5 text-center">
+   324	              <p>*Individual results vary based on effort, skills, market conditions, and transaction volume.</p>
+   325	              <p className="font-bold text-[#FF4A00]">There is no income ceiling in business brokerage.</p>
+   326	            </div>
+   327	          </div>
+   328	        </div>
+   329	
+   330	        {/* Right Column (Testimonial Card) */}
+   331	        <div className="lg:col-span-6 flex flex-col h-full w-full">
+   332	          <div className="border border-gray-200 rounded-lg p-6 bg-white shadow-sm flex flex-col justify-between flex-1 w-full gap-6">
+   333	            <div className="flex flex-col gap-4">
+   334	              {/* Header row: Quote icon & Star Rating */}
+   335	              <div className="flex items-center justify-between">
+   336	                <Quote className="w-8 h-8 sm:w-10 sm:h-10 fill-[#F57E45] text-[#F57E45] rotate-180" />
+   337	                <div className="flex gap-1">
+   338	                  <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FBBF24] text-[#FBBF24]" />
+   339	                  <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FBBF24] text-[#FBBF24]" />
+   340	                  <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FBBF24] text-[#FBBF24]" />
+   341	                  <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FBBF24] text-[#FBBF24]" />
+   342	                  <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FBBF24] text-[#FBBF24]" />
+   343	                </div>
+   344	              </div>
+   345	
+   346	              {/* Main content: Quote text & Clark Bell photo */}
+   347	              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start justify-between">
+   348	                <p className="font-medium text-gray-800 text-lg sm:text-xl lg:text-[22px] leading-relaxed flex-1">
+   349	                  "After leaving corporate America, I wanted a professional business I could build from home. FastStart gave me the systems, structure, and confidence to begin."
+   350	                </p>
+   351	                <div className="w-44 h-48 sm:w-48 sm:h-52 shrink-0 bg-slate-200 rounded-lg overflow-hidden animate-pulse shadow-xs">
+   352	                  <img 
+   353	                    src={clarkImg} 
+   354	                    alt="Clark Bell" 
+   355	                    loading="lazy" 
+   356	                    decoding="async" 
+   357	                    className="w-full h-full object-cover object-[center_40%] transition-opacity duration-700 ease-in-out opacity-0" 
+   358	                    onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); e.currentTarget.parentElement?.classList.remove('animate-pulse'); }}
+   359	                  />
+   360	                </div>
+   361	              </div>
+   362	            </div>
+   363	
+   364	            {/* Footer / Attribution */}
+   365	            <div className="border-t border-gray-100 pt-4">
+   366	              <p className="font-bold text-gray-800 text-base sm:text-lg mb-1">"In my first year I made $690,000!"</p>
+   367	              <div className="flex items-baseline gap-2">
+   368	                <p className="text-[#1E3A8A] font-bold text-base sm:text-lg">— Clark Bell</p>
+   369	                <p className="text-gray-500 text-xs sm:text-sm">Former FastStart Student</p>
+   370	              </div>
+   371	            </div>
+   372	          </div>
+   373	        </div>
+   374	      </section>
+   375	
+   376	      {/* SECTION 6: 7-STEP PROCESS */}
+   377	      <section className="py-8 lg:py-12 bg-white text-center px-3 sm:px-6 lg:px-8 xl:px-10 border-t border-gray-100">
+   378	        <div className="w-full max-w-none">
+   379	          <h2 className="text-[#1E3A8A] font-bold text-[30px]">WHAT DOES A BUSINESS BROKER ACTUALLY DO?</h2>
+   380	          <p className="text-gray-600 mt-2 text-[20px]">You are the trusted intermediary between business buyers and sellers.</p>
+   381	          
+   382	          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between lg:items-stretch mt-8 gap-6 lg:gap-2 relative">
+   383	            <div className="hidden lg:block absolute top-6 left-[5%] right-[5%] h-[2px] bg-gray-200 z-0"></div>
+   384	            <div className="flex flex-col items-center flex-1 justify-start">
+   385	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">1</div>
+   386	              <img src={icon01} alt="Step 1" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   387	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Meet with Business Owners</h3>
+   388	              <p className="text-gray-500 font-bold text-[16px]">Understand their goals and determine if a sale is the best option for the market.</p>
+   389	            </div>
+   390	            
+   391	            <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative min-w-[32px]">
+   392	               <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-gray-200 -translate-x-1/2 z-0"></div>
+   393	               <div className="bg-white py-2 relative z-10 mt-[12px]">
+   394	               <ArrowRight className="text-[#FF4A00] text-xl font-bold" />
+   395	               </div>
+   396	            </div>
+   397	
+   398	            <div className="flex flex-col items-center flex-1 justify-start">
+   399	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">2</div>
+   400	              <img src={icon02} alt="Step 2" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   401	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Value the Business</h3>
+   402	              <p className="text-gray-500 font-bold text-[16px]">Analyze financials, market position, and intangible factors to determine value.</p>
+   403	            </div>
+   404	
+   405	            <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative min-w-[32px]">
+   406	               <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-gray-200 -translate-x-1/2 z-0"></div>
+   407	               <div className="bg-white py-2 relative z-10 mt-[12px]">
+   408	               <ArrowRight className="text-[#FF4A00] text-xl font-bold" />
+   409	               </div>
+   410	            </div>
+   411	
+   412	            <div className="flex flex-col items-center flex-1 justify-start">
+   413	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">3</div>
+   414	              <img src={icon03} alt="Step 3" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   415	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Prepare Marketing Materials</h3>
+   416	              <p className="text-gray-500 font-bold text-[16px]">Create a confidential information package that highlights the business opportunity.</p>
+   417	            </div>
+   418	
+   419	            <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative min-w-[32px]">
+   420	               <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-gray-200 -translate-x-1/2 z-0"></div>
+   421	               <div className="bg-white py-2 relative z-10 mt-[12px]">
+   422	               <ArrowRight className="text-[#FF4A00] text-xl font-bold" />
+   423	               </div>
+   424	            </div>
+   425	
+   426	            <div className="flex flex-col items-center flex-1 justify-start">
+   427	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">4</div>
+   428	              <img src={icon04} alt="Step 4" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   429	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Find Qualified Buyers</h3>
+   430	              <p className="text-gray-500 font-bold text-[16px]">Market the business online and personally to pre-qualified buyers.</p>
+   431	            </div>
+   432	
+   433	            <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative min-w-[32px]">
+   434	               <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-gray-200 -translate-x-1/2 z-0"></div>
+   435	               <div className="bg-white py-2 relative z-10 mt-[12px]">
+   436	               <ArrowRight className="text-[#FF4A00] text-xl font-bold" />
+   437	               </div>
+   438	            </div>
+   439	
+   440	            <div className="flex flex-col items-center flex-1 justify-start">
+   441	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">5</div>
+   442	              <img src={icon05} alt="Step 5" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   443	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Manage Due Diligence</h3>
+   444	              <p className="text-gray-500 font-bold text-[16px]">Guide both parties through due diligence to keep the process moving forward.</p>
+   445	            </div>
+   446	
+   447	            <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative min-w-[32px]">
+   448	               <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-gray-200 -translate-x-1/2 z-0"></div>
+   449	               <div className="bg-white py-2 relative z-10 mt-[12px]">
+   450	               <ArrowRight className="text-[#FF4A00] text-xl font-bold" />
+   451	               </div>
+   452	            </div>
+   453	
+   454	            <div className="flex flex-col items-center flex-1 justify-start">
+   455	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">6</div>
+   456	              <img src={icon06} alt="Step 6" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   457	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Coordinate Closing</h3>
+   458	              <p className="text-gray-500 font-bold text-[16px]">Work with attorneys, CPAs, and lenders to ensure a smooth closing.</p>
+   459	            </div>
+   460	
+   461	            <div className="hidden lg:flex flex-col items-center flex-shrink-0 relative min-w-[32px]">
+   462	               <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-gray-200 -translate-x-1/2 z-0"></div>
+   463	               <div className="bg-white py-2 relative z-10 mt-[12px]">
+   464	               <ArrowRight className="text-[#FF4A00] text-xl font-bold" />
+   465	               </div>
+   466	            </div>
+   467	
+   468	            <div className="flex flex-col items-center flex-1 justify-start">
+   469	              <div className="w-12 h-12 bg-[#000067] text-white rounded-full flex items-center justify-center font-bold mb-3 text-xl relative z-10">7</div>
+   470	              <img src={icon07} alt="Step 7" loading="lazy" decoding="async" className="w-[92px] h-[92px] mb-3 object-contain" />
+   471	              <h3 className="text-[#1E3A8A] font-bold text-sm mb-2">Assist with Orderly Transition</h3>
+   472	              <p className="text-gray-500 font-bold text-[16px]">Help ensure a successful handoff so the business continues to thrive.</p>
+   473	            </div>
+   474	          </div>
+   475	        </div>
+   476	      </section>
+   477	
+   478	      {/* SECTION 7: FOOTER & LEN KRICK */}
+   479	      <section className="relative py-16 bg-gray-50 px-3 sm:px-6 lg:px-8 xl:px-10">
+   480	        <div className="relative w-full max-w-none grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+   481	          {/* Left Column Card */}
+   482	          <div className="bg-[#0A1931] text-white p-4 sm:p-5 rounded-2xl shadow-xl flex flex-col xl:flex-row items-center gap-4 h-full">
+   483	            <div className="flex-1">
+   484	              <h2 className="text-xl sm:text-2xl font-bold mb-2">The Largest Business Ownership Transfer in History Is Happening Right Now</h2>
+   485	              <ul className="flex flex-col gap-1 text-sm">
+   486	                <li className="flex items-start gap-3">
+   487	                  <Check className="text-[#FF4A00] flex-shrink-0 mt-1" />
+   488	                  <span>10,000 Baby Boomers reach retirement age every day</span>
+   489	                </li>
+   490	                <li className="flex items-start gap-3">
+   491	                  <Check className="text-[#FF4A00] flex-shrink-0 mt-1" />
+   492	                  <span>Millions of privately-owned businesses will change hands over the next decade</span>
+   493	                </li>
+   494	                <li className="flex items-start gap-3">
+   495	                  <Check className="text-[#FF4A00] flex-shrink-0 mt-1" />
+   496	                  <span>SBA financing availability has expanded dramatically</span>
+   497	                </li>
+   498	                <li className="flex items-start gap-3">
+   499	                  <Check className="text-[#FF4A00] flex-shrink-0 mt-1" />
+   500	                  <span>Buyers continue seeking acquisition opportunities</span>
+   501	                </li>
+   502	                <li className="flex items-start gap-3">
+   503	                  <Check className="text-[#FF4A00] flex-shrink-0 mt-1" />
+   504	                  <span>Many business owners have no succession plan</span>
+   505	                </li>
+   506	                <li className="flex items-start gap-3">
+   507	                  <Check className="text-[#FF4A00] flex-shrink-0 mt-1" />
+   508	                  <span>Demand for trained intermediaries has never been greater</span>
+   509	                </li>
+   510	              </ul>
+   511	            </div>
+   512	            <div className="w-full sm:w-[345px] shrink-0 mt-4 xl:mt-0 flex justify-center xl:justify-start">
+   513	              <img src={meetingImg} alt="Meeting" loading="lazy" decoding="async" className="w-full max-w-[345px] h-auto ml-0 object-contain rounded-xl shadow-xl" />
+   514	            </div>
+   515	          </div>
+   516	
+   517	          {/* Right Column Card */}
+   518	          <div className="bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-gray-100 flex flex-col sm:flex-row gap-4 items-center h-full text-gray-900 justify-between">
+   519	            {/* Text Info */}
+   520	            <div className="flex-1 min-w-0 flex flex-col justify-between h-full">
+   521	              <div>
+   522	                <h2 className="text-lg sm:text-xl font-bold mb-1 text-[#0A1931]">Created by Len Krick, MBA</h2>
+   523	                <div className="mb-2 text-xs sm:text-sm">
+   524	                  <p className="text-gray-600 font-medium">IBBA Hall of Fame Inductee • Course Author</p>
+   525	                  <p className="text-[#FF4A00] font-bold mt-1">Certified Business Intermediary</p>
+   526	                  <p className="text-[#FF4A00] font-bold">Lifetime Certified Business Intermediary</p>
+   527	                </div>
+   528	                   
+   529	                <ul className="flex flex-col gap-2 mb-3 text-sm text-gray-800">
+   530	                  <li className="flex items-start gap-2">
+   531	                    <Check className="text-[#FF4A00] flex-shrink-0 mt-1 w-4 h-4" />
+   532	                    <span>Over 40 years in business brokerage</span>
+   533	                  </li>
+   534	                  <li className="flex items-start gap-2">
+   535	                    <Check className="text-[#FF4A00] flex-shrink-0 mt-1 w-4 h-4" />
+   536	                    <span>Trained over 400 business brokers</span>
+   537	                  </li>
+   538	                  <li className="flex items-start gap-2">
+   539	                    <Check className="text-[#FF4A00] flex-shrink-0 mt-1 w-4 h-4" />
+   540	                    <span>Thousands of successful transactions</span>
+   541	                  </li>
+   542	                  <li className="flex items-start gap-2">
+   543	                    <Check className="text-[#FF4A00] flex-shrink-0 mt-1 w-4 h-4" />
+   544	                    <span>Developer of FastStart™ Training</span>
+   545	                  </li>
+   546	                  <li className="flex items-start gap-2">
+   547	                    <Check className="text-[#FF4A00] flex-shrink-0 mt-1 w-4 h-4" />
+   548	                    <span>Developer of PricePoint™ Software</span>
+   549	                  </li>
+   550	                </ul>
+   551	              </div>
+   552	
+   553	              <div className="flex gap-4 items-center mt-4">
+   554	                <img src={ibbaLogo} alt="IBBA Logo" loading="lazy" decoding="async" className="h-[55px] object-contain" />
+   555	                <img src={maLogo} alt="M&A Source Logo" loading="lazy" decoding="async" className="h-[60px] object-contain" />
+   556	              </div>
+   557	            </div>
+   558	
+   559	            {/* Fixed Image Container */}
+   560	            <div className="w-[300px] sm:w-[340px] shrink-0 relative flex justify-center items-end self-end">
+   561	              <img 
+   562	                src={lenKrickImg} 
+   563	                alt="Len Krick" 
+   564	                width="336"
+   565	                height="420"
+   566	                loading="lazy"
+   567	                decoding="async"
+   568	                className="w-full h-[350px] object-contain mix-blend-multiply transition-opacity duration-700 ease-in-out opacity-0"
+   569	                onLoad={(e) => { e.currentTarget.classList.remove('opacity-0'); }}
+   570	              />
+   571	            </div>
+   572	          </div>
+   573	        </div>
+   574	      </section>
+   575	
+   576	      {/* SECTION 8: BOTTOM CTA BANNER */}
+   577	      <section className="bg-[#071224] text-center py-8 px-4 sm:px-6 border-t border-gray-800">
+   578	        <h2 className="text-2xl font-bold text-white uppercase mb-2">
+   579	          START BUILDING YOUR BUSINESS BROKERAGE CAREER TODAY
+   580	        </h2>
+   581	        <p className="text-[#FF4A00] font-bold mb-6">
+   582	          Unlimited Income Potential • Flexible Lifestyle • Low Startup Cost
+   583	        </p>
+   584	        <a 
+   585	          href="#faststart-online-training" 
+   586	          onClick={(e) => { e.preventDefault(); onNavigate?.('training'); }}
+   587	          className="bg-[#FF4A00] text-white font-extrabold px-8 py-3 rounded-md text-lg inline-block w-full sm:w-auto text-center hover:bg-[#e04100] transition-colors cursor-pointer"
+   588	        >
+   589	          LEARN ABOUT FASTSTART TRAINING ➔
+   590	        </a>
+   591	      </section>
+   592	      </main>
+   593	    </div>
+   594	  );
+   595	}
